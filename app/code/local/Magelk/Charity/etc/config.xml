@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Magelk_Charity>
+            <version>0.1.0</version>
+        </Magelk_Charity>
+    </modules>
+    <global>
+        <models>
+            <magelk_charity>
+                <class>Magelk_Charity_Model</class>
+            </magelk_charity>
+        </models>
+        <blocks>
+            <magelk_charity>
+                <class>Magelk_Charity_Block</class>
+            </magelk_charity>
+        </blocks>
+        <helpers>
+            <magelk_charity>
+                <class>Magelk_Charity_Helper</class>
+            </magelk_charity>
+        </helpers>
+        <resources>
+            <magelk_charity_setup>
+                <setup>
+                    <module>Magelk_Charity</module>
+                </setup>
+            </magelk_charity_setup>
+        </resources>
+    </global>
+</config>

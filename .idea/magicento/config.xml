@@ -269,11 +269,34 @@
                 <setup>
                     <module>Mage_Compiler</module>
                 </setup>
-            </compiler_setup><moneybookers_setup>
+            </compiler_setup><bannerslider_setup>
+                <setup>
+                    <module>Magestore_Bannerslider</module>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </bannerslider_setup><bannerslider_write>
+                <connection>
+                    <use>core_write</use>
+                </connection>
+            </bannerslider_write><bannerslider_read>
+                <connection>
+                    <use>core_read</use>
+                </connection>
+            </bannerslider_read><magelk_charity_setup>
+                <setup>
+                    <module>Magelk_Charity</module>
+                </setup>
+            </magelk_charity_setup><moneybookers_setup>
                 <setup>
                     <module>Phoenix_Moneybookers</module>
                 </setup>
-            </moneybookers_setup><db>
+            </moneybookers_setup><foo_bar_setup>
+                <setup>
+                    <module>Foo_Bar</module>
+                </setup>
+            </foo_bar_setup><db>
                 <table_prefix />
             </db></resources>
         <resource>
@@ -1726,9 +1749,49 @@
                 </entities>
             </compiler_resource><connect>
                 <class>Mage_Connect_Model</class>
-            </connect><moneybookers>
+            </connect><bannerslider>
+                <class>Magestore_Bannerslider_Model</class>
+                <resourceModel>bannerslider_mysql4</resourceModel>
+            </bannerslider><bannerslider_mysql4>
+                <class>Magestore_Bannerslider_Model_Mysql4</class>
+                <entities>
+                    <bannerslider>
+                        <table>bannerslider</table>
+                    </bannerslider>
+                </entities>
+            </bannerslider_mysql4><magelk_charity>
+                <class>Magelk_Charity_Model</class>
+                <resourceModel>charity_entity</resourceModel>
+            </magelk_charity><charity_entity>
+                <class>Magelk_Charity_Model_Mysql4</class>
+                <entities>
+                    <org>
+                        <table>magelk_charity_organization</table>
+                    </org>
+                    <txn>
+                        <table>magelk_charity_transactions</table>
+                    </txn>
+                    <product>
+                        <table>magelk_charity_organization_products</table>
+                    </product>
+                </entities>
+            </charity_entity><moneybookers>
                 <class>Phoenix_Moneybookers_Model</class>
-            </moneybookers></models>
+            </moneybookers><foo_bar>
+                <!-- This is where we define our model directory -->
+                <class>Foo_Bar_Model</class>
+                <!-- Define a resource to create a custom table -->
+                <resourceModel>foo_bar_mysql4</resourceModel>
+            </foo_bar><foo_bar_mysql4>
+                <class>Foo_Bar_Model_Mysql4</class>
+                <entities>
+                    <!-- Let's define our table, we'll call it with the baz name, but the real table is foo_bar_baz -->
+                    <!-- After we define our entity, we can call it with our model by calling foo_bar/baz -->
+                    <baz>
+                        <table>foo_bar_baz</table>
+                    </baz>
+                </entities>
+            </foo_bar_mysql4></models>
     <blocks>
             <core>
                 <class>Mage_Core_Block</class>
@@ -1811,7 +1874,14 @@
                 <class>Mage_PageCache_Block</class>
             </pagecache><connect>
                 <class>Mage_Connect_Block</class>
-            </connect><moneybookers><class>Phoenix_Moneybookers_Block</class></moneybookers></blocks><helpers>
+            </connect><bannerslider>
+                <class>Magestore_Bannerslider_Block</class>
+            </bannerslider><magelk_charity>
+                <class>Magelk_Charity_Block</class>
+            </magelk_charity><moneybookers><class>Phoenix_Moneybookers_Block</class></moneybookers><foo_bar>
+                <!-- Set a block definition and lookup directory -->
+                <class>Foo_Bar_Block</class>
+            </foo_bar></blocks><helpers>
             <core>
                 <encryption_model>Mage_Core_Model_Encryption</encryption_model>
             </core>
@@ -1851,9 +1921,16 @@
                 <class>Mage_XmlConnect_Helper</class>
             </xmlconnect><pagecache>
                 <class>Mage_PageCache_Helper</class>
-            </pagecache><moneybookers>
+            </pagecache><bannerslider>
+                <class>Magestore_Bannerslider_Helper</class>
+            </bannerslider><magelk_charity>
+                <class>Magelk_Charity_Helper</class>
+            </magelk_charity><moneybookers>
                 <class>Phoenix_Moneybookers_Helper</class>
-            </moneybookers></helpers><template>
+            </moneybookers><foo_bar>
+                <!-- This is where we define our helper directory -->
+                <class>Foo_Bar_Helper</class>
+            </foo_bar></helpers><template>
             <email><admin_emails_forgot_email_template translate="label" module="adminhtml">
                     <label>Forgot Admin Password</label>
                     <file>admin_password_reset_confirmation.html</file>
@@ -2417,7 +2494,11 @@
                         <class>wishlist/observer</class>
                         <method>processAddToCart</method>
                     </wishlist>
-                </observers>
+                <xyz_catalog_price_observer>
+                        <type>singleton</type>
+                        <class>Magelk_Charity_Model_Observer</class>
+                        <method>createTxn</method>
+                    </xyz_catalog_price_observer></observers>
             </checkout_cart_add_product_complete><before_login_post_redirect>
                 <observers>
                     <oauth>
@@ -6035,7 +6116,15 @@ T: {{var telephone}}
             <airmail>
                 <broadcast_url>https://go.urbanairship.com/api/airmail/send/broadcast/</broadcast_url>
             </airmail>
-        </xmlconnect><moneybookers>
+        </xmlconnect><bannerslider>
+				<settings>
+					<time_delay>6</time_delay>
+					<show_description>1</show_description>
+					<list_style>1</list_style>
+					<image_width>450</image_width>
+					<image_height>250</image_height>
+				</settings>
+			</bannerslider><moneybookers>
             <settings>
                 <activationstatus>0</activationstatus>
             </settings>
@@ -6172,9 +6261,15 @@ T: {{var telephone}}
             <version>1.6.0.0</version>
         </Mage_Compiler><Mage_Connect>
             <version>1.6.0.0</version>
-        </Mage_Connect><Phoenix_Moneybookers>
+        </Mage_Connect><Magestore_Bannerslider>
+            <version>2.0.0</version>
+        </Magestore_Bannerslider><Magelk_Charity>
+            <version>0.1.0</version>
+        </Magelk_Charity><Phoenix_Moneybookers>
             <version>1.6.0.0</version>
-        </Phoenix_Moneybookers></modules><frontend>
+        </Phoenix_Moneybookers><Foo_Bar>
+            <version>1.0.0</version>
+        </Foo_Bar></modules><frontend>
         <routers>
             <core>
                 <use>standard</use>
@@ -6375,7 +6470,13 @@ T: {{var telephone}}
                     <module>Mage_XmlConnect</module>
                     <frontName>xmlconnect</frontName>
                 </args>
-            </xmlconnect><moneybookers>
+            </xmlconnect><bannerslider>
+                <use>standard</use>
+                <args>
+                    <module>Magestore_Bannerslider</module>
+                    <frontName>bannerslider</frontName>
+                </args>
+            </bannerslider><moneybookers>
                 <use>standard</use>
                 <args>
                     <module>Phoenix_Moneybookers</module>
@@ -6650,7 +6751,15 @@ T: {{var telephone}}
                     <file>xmlconnect.xml</file>
                 </xmlconnect><pagecache>
                     <file>pagecache.xml</file>
-                </pagecache><moneybookers>
+                </pagecache><bannerslider>
+                    <file>bannerslider.xml</file>
+                </bannerslider><magelk_charity>
+                    <!--
+                    We again keep a nice naming convention and make our module upgrade proof by placing it in a separate folder
+                    - Since we are in the adminhtml node, this will look for the XML file in the app/design/adminhtml/default/default root folder
+                    -->
+                    <file>charity.xml</file>
+                </magelk_charity><moneybookers>
                     <file>moneybookers.xml</file>
                 </moneybookers></updates>
         </layout>
@@ -7971,9 +8080,23 @@ T: {{var telephone}}
                     <file>compiler.xml</file>
                 </compiler><connect>
                     <file>connect.xml</file>
-                </connect><moneybookers>
+                </connect><bannerslider>
+					<file>bannerslider.xml</file>
+				</bannerslider><magelk_charity>
+                    <!--
+                    We again keep a nice naming convention and make our module upgrade proof by placing it in a separate folder
+                    - Since we are in the adminhtml node, this will look for the XML file in the app/design/adminhtml/default/default root folder
+                    -->
+                    <file>charity.xml</file>
+                </magelk_charity><moneybookers>
                     <file>moneybookers.xml</file>
-                </moneybookers></updates>
+                </moneybookers><foo_bar>
+                    <!--
+                    We again keep a nice naming convention and make our module upgrade proof by placing it in a separate folder
+                    - Since we are in the adminhtml node, this will look for the XML file in the app/design/adminhtml/default/default root folder
+                    -->
+                    <file>foo/bar.xml</file>
+                </foo_bar></updates>
         </layout><cms>
             <browser>
                 <dirs>
@@ -8311,10 +8434,16 @@ T: {{var telephone}}
                 <args>
                     <modules>
                         <Mage_Index before="Mage_Adminhtml">Mage_Index_Adminhtml</Mage_Index>
-                    <importexport before="Mage_Adminhtml">Mage_ImportExport_Adminhtml</importexport><Mage_Paygate before="Mage_Adminhtml">Mage_Paygate_Adminhtml</Mage_Paygate><Mage_Centinel before="Mage_Adminhtml">Mage_Centinel_Adminhtml</Mage_Centinel><Mage_Paypal before="Mage_Adminhtml">Mage_Paypal_Adminhtml</Mage_Paypal><widget before="Mage_Adminhtml">Mage_Widget_Adminhtml</widget><oauth before="Mage_Adminhtml">Mage_Oauth_Adminhtml</oauth><Mage_Downloadable before="Mage_Adminhtml">Mage_Downloadable_Adminhtml</Mage_Downloadable><api2 before="Mage_Adminhtml">Mage_Api2_Adminhtml</api2><Mage_Bundle before="Mage_Adminhtml">Mage_Bundle_Adminhtml</Mage_Bundle><Mage_Authorizenet before="Mage_Adminhtml">Mage_Authorizenet_Adminhtml</Mage_Authorizenet><currencysymbol>Mage_CurrencySymbol_Adminhtml</currencysymbol><captcha>Mage_Captcha_Adminhtml</captcha><xmlconnect before="Mage_Adminhtml">Mage_XmlConnect_Adminhtml</xmlconnect><Mage_PageCache before="Mage_Adminhtml">Mage_PageCache_Adminhtml</Mage_PageCache><Mage_Compiler before="Mage_Adminhtml">Mage_Compiler_Adminhtml</Mage_Compiler><connect before="Mage_Adminhtml">Mage_Connect_Adminhtml</connect><moneybookers after="Mage_Adminhtml">Phoenix_Moneybookers</moneybookers></modules>
+                    <importexport before="Mage_Adminhtml">Mage_ImportExport_Adminhtml</importexport><Mage_Paygate before="Mage_Adminhtml">Mage_Paygate_Adminhtml</Mage_Paygate><Mage_Centinel before="Mage_Adminhtml">Mage_Centinel_Adminhtml</Mage_Centinel><Mage_Paypal before="Mage_Adminhtml">Mage_Paypal_Adminhtml</Mage_Paypal><widget before="Mage_Adminhtml">Mage_Widget_Adminhtml</widget><oauth before="Mage_Adminhtml">Mage_Oauth_Adminhtml</oauth><Mage_Downloadable before="Mage_Adminhtml">Mage_Downloadable_Adminhtml</Mage_Downloadable><api2 before="Mage_Adminhtml">Mage_Api2_Adminhtml</api2><Mage_Bundle before="Mage_Adminhtml">Mage_Bundle_Adminhtml</Mage_Bundle><Mage_Authorizenet before="Mage_Adminhtml">Mage_Authorizenet_Adminhtml</Mage_Authorizenet><currencysymbol>Mage_CurrencySymbol_Adminhtml</currencysymbol><captcha>Mage_Captcha_Adminhtml</captcha><xmlconnect before="Mage_Adminhtml">Mage_XmlConnect_Adminhtml</xmlconnect><Mage_PageCache before="Mage_Adminhtml">Mage_PageCache_Adminhtml</Mage_PageCache><Mage_Compiler before="Mage_Adminhtml">Mage_Compiler_Adminhtml</Mage_Compiler><connect before="Mage_Adminhtml">Mage_Connect_Adminhtml</connect><Magelk_Charity before="Mage_Adminhtml">Magelk_Charity_Adminhtml</Magelk_Charity><moneybookers after="Mage_Adminhtml">Phoenix_Moneybookers</moneybookers><Foo_Bar before="Mage_Adminhtml">Foo_Bar_Adminhtml</Foo_Bar></modules>
                 <module>Mage_Adminhtml</module><frontName><![CDATA[admin]]></frontName></args>
             <use>admin</use></adminhtml>
-        </routers>
+        <bannerslider>
+				<use>admin</use>
+				<args>
+					<module>Magestore_Bannerslider</module>
+					<frontName>bannerslider</frontName>
+				</args>
+			</bannerslider></routers>
     <fieldsets>
             <catalog_product_dataflow>
                 <qty>

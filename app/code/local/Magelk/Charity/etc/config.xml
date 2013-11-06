@@ -9,7 +9,22 @@
         <models>
             <magelk_charity>
                 <class>Magelk_Charity_Model</class>
+                <resourceModel>charity_entity</resourceModel>
             </magelk_charity>
+            <charity_entity>
+                <class>Magelk_Charity_Model_Mysql4</class>
+                <entities>
+                    <org>
+                        <table>magelk_charity_organization</table>
+                    </org>
+                    <txn>
+                        <table>magelk_charity_transactions</table>
+                    </txn>
+                    <product>
+                        <table>magelk_charity_organization_products</table>
+                    </product>
+                </entities>
+            </charity_entity>
         </models>
         <blocks>
             <magelk_charity>
@@ -28,5 +43,53 @@
                 </setup>
             </magelk_charity_setup>
         </resources>
+        <events>
+            <checkout_cart_add_product_complete>
+                <observers>
+                    <xyz_catalog_price_observer>
+                        <type>singleton</type>
+                        <class>Magelk_Charity_Model_Observer</class>
+                        <method>createTxn</method>
+                    </xyz_catalog_price_observer>
+                </observers>
+            </checkout_cart_add_product_complete>
+        </events>
     </global>
+    <frontend>
+        <layout>
+            <updates>
+                <magelk_charity>
+                    <!--
+                    We again keep a nice naming convention and make our module upgrade proof by placing it in a separate folder
+                    - Since we are in the adminhtml node, this will look for the XML file in the app/design/adminhtml/default/default root folder
+                    -->
+                    <file>charity.xml</file>
+                </magelk_charity>
+            </updates>
+        </layout>
+    </frontend>
+    <admin>
+        <routers>
+            <adminhtml>
+                <args>
+                    <modules>
+                        <Magelk_Charity before="Mage_Adminhtml">Magelk_Charity_Adminhtml</Magelk_Charity>
+                    </modules>
+                </args>
+            </adminhtml>
+        </routers>
+    </admin>
+    <adminhtml>
+        <layout>
+            <updates>
+                <magelk_charity>
+                    <!--
+                    We again keep a nice naming convention and make our module upgrade proof by placing it in a separate folder
+                    - Since we are in the adminhtml node, this will look for the XML file in the app/design/adminhtml/default/default root folder
+                    -->
+                    <file>charity.xml</file>
+                </magelk_charity>
+            </updates>
+        </layout>
+    </adminhtml>
 </config>

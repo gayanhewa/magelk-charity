@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<layout>
+<!-- Here, we reference the XML node path of our route -->
+<adminhtml_organization_index>
+    <reference name="content">
+        <!-- We also reference our block by namespacename_modulename/adminhtml_controllername, and name it uniquely -->
+        <block type="magelk_charity/adminhtml_organization" name="charity.organization"/>
+    </reference>
+</adminhtml_organization_index>
+    <adminhtml_product_index>
+        <reference name="content">
+            <!-- We also reference our block by namespacename_modulename/adminhtml_controllername, and name it uniquely -->
+            <block type="magelk_charity/adminhtml_product" name="charity.product"/>
+        </reference>
+    </adminhtml_product_index>
+    <adminhtml_product_edit>
+        <reference name="content">
+            <!-- We also reference our block by namespacename_modulename/adminhtml_controllername, and name it uniquely -->
+            <block type="magelk_charity/adminhtml_product_organization" name="charity.product.org"/>
+        </reference>
+    </adminhtml_product_edit>
+    <adminhtml_product_assign>
+        <reference name="content">
+            <!-- We also reference our block by namespacename_modulename/adminhtml_controllername, and name it uniquely -->
+            <block type="magelk_charity/adminhtml_product_organization_suborg" name="charity.product.org.suborg"/>
+        </reference>
+    </adminhtml_product_assign>
+</layout>

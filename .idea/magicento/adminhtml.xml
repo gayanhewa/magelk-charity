@@ -266,7 +266,24 @@
                     <title>Google Sitemap</title>
                     <sort_order>180</sort_order>
                     <action>adminhtml/sitemap/</action>
-                </sitemap></children>
+                </sitemap><magelk_charity translate="title" module="magelk_charity">
+                    <title>Charity Manager</title>
+                    <action>adminhtml/organization</action>
+                    <children>
+                        <magelk_charity_org>
+                            <title>Manage Organization</title>
+                            <action>adminhtml/organization</action>
+                        </magelk_charity_org>
+                        <magelk_charity_product>
+                            <title>Assign Organizations</title>
+                            <action>adminhtml/product</action>
+                        </magelk_charity_product>
+                        <magelk_charity_settlements>
+                            <title>Manage Settlements</title>
+                            <action>adminhtml/organization</action>
+                        </magelk_charity_settlements>
+                    </children>
+                </magelk_charity></children>
         </catalog><customer translate="title" module="customer">
             <title>Customers</title>
             <sort_order>40</sort_order>
@@ -371,7 +388,12 @@
                             <action>adminhtml/tax_class_product</action>
                         </classes_product>
                     </children>
-                </tax></children>
+                </tax><foo_bar_baz translate="title" module="foo_bar">
+                    <!-- This is how the menu text will be displayed -->
+                    <title>Baz</title>
+                    <!-- This is the URL of what we want the menu item to link to -->
+                    <action>adminhtml/baz</action>
+                </foo_bar_baz></children>
          </sales><report>
             <children>
                 <salesroot translate="title">
@@ -549,7 +571,17 @@
                     <action>adminhtml/admin_application</action>
                 </mobile_admin_app>
             </children>
-        </xmlconnect></menu><acl>
+        </xmlconnect><bannerslider module="bannerslider">
+				<title>Banner Slider</title>
+				<sort_order>71</sort_order>               
+				<children>
+					<items module="bannerslider">
+						<title>Manage Banners</title>
+						<sort_order>0</sort_order>
+						<action>bannerslider/adminhtml_bannerslider</action>
+					</items>
+				</children>
+			</bannerslider></menu><acl>
         <resources>
             <admin>
                 <children>
@@ -684,7 +716,10 @@
                                         <title>Newsletter Section</title>
                                     </newsletter><persistent translate="title" module="persistent">
                                         <title>Persistent Shopping Cart</title>
-                                    </persistent></children>
+                                    </persistent><bannerslider translate="title" module="bannerslider"> 
+											<title>Banner Slider Settings</title>
+											<sort_order>50</sort_order>
+										</bannerslider></children>
                             <title>Configuration</title><sort_order>20</sort_order></config>
                         <index translate="title">
                                 <title>Index Management</title>
@@ -919,7 +954,9 @@
                                 </children>
                             </tag><sitemap translate="title" module="sitemap">
                                 <title>Google Sitemap</title>
-                            </sitemap></children>
+                            </sitemap><magelk_charity>
+                                <title>Manage Organizations</title>
+                            </magelk_charity></children>
                     </catalog><customer translate="title" module="customer">
                         <title>Customers</title>
                         <sort_order>40</sort_order>
@@ -1051,7 +1088,10 @@
                                         <sort_order>40</sort_order>
                                     </rules>
                                 </children>
-                            </tax></children>
+                            </tax><foo_bar_baz>
+                                <!-- This is how the ACL text will be displayed on System > Permissions > Roles > Role > Role Resources -->
+                                <title>Baz</title>
+                            </foo_bar_baz></children>
                     </sales><report>
                         <children>
                             <salesroot>
@@ -1196,11 +1236,14 @@
                     </xmlconnect><page_cache translate="title" module="pageCache">
                         <title>External Page Cache</title>
                         <sort_order>0</sort_order>
-                    </page_cache></children>
+                    </page_cache><Magestore_Bannerslider>
+							<title>Bannerslider Module</title>
+							<sort_order>10</sort_order>
+						</Magestore_Bannerslider></children>
             <title>Magento Admin</title></admin>
         <all>
-                <title>Allow everything</title>
-            </all></resources>
+                
+            <title>Allow Everything</title></all></resources>
     <privilegeSets>
             <default>
                 <view>

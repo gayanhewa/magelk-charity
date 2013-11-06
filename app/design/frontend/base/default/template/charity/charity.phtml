@@ -1,0 +1,29 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: gayan
+ * Date: 06/11/13
+ * Time: 11:47
+ */
+?>
+
+<div id="charity-wrapper">
+    </br>
+    <label> Select Charity :
+        <select name="charity">
+            <option value="">Select Charity</option>
+            <?php foreach($this->getAllCharities() as $charity):?>
+                <option value="<?php echo $charity->getId();?>"><?php echo $charity->getName();?></option>
+            <?php endforeach;?>
+        </select>
+    </label>
+
+</div>
+
+
+<script type="text/javascript">
+    document.observe("dom:loaded", function() {
+        $$('div.price-box')[0].insert($('charity-wrapper'));
+        //$("product_addtocart_form").insert("<input type='hidden' name='testt' value='100'/>");
+    });
+</script>

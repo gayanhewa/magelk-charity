@@ -10,20 +10,32 @@
 <div id="charity-wrapper">
     </br>
     <label> Select Charity :
-        <select name="charity">
+        <div id="donation-desc">
+
+        </div>
+        <select id="charity-select" name="charity">
             <option value="">Select Charity</option>
-            <?php foreach($this->getAllCharities() as $charity):?>
-                <option value="<?php echo $charity->getId();?>"><?php echo $charity->getName();?></option>
-            <?php endforeach;?>
+            <?php foreach ($this->getAllCharities() as $charity): ?>
+                <option value="<?php echo $charity->getId(); ?>"><?php echo $charity->getName(); ?></option>
+            <?php endforeach; ?>
         </select>
     </label>
-
 </div>
 
-
 <script type="text/javascript">
-    document.observe("dom:loaded", function() {
+    var amounts = <?php echo $this->getCharityAmountByProductId();?>;
+    document.observe("dom:loaded", function () {
         $$('div.price-box')[0].insert($('charity-wrapper'));
-        //$("product_addtocart_form").insert("<input type='hidden' name='testt' value='100'/>");
+
+        //On change charity dropdown
+        $("charity-select").observe('change', function () {
+            $('donation-desc').innerHTML = "";
+            if ($("charity-select").value != "") {
+                if (amounts[$("charity-select").value] != undefined) {
+                    $('donation-desc').innerHTML = amounts[$("charity-select").value];
+                }
+            }
+        })
+
     });
 </script>

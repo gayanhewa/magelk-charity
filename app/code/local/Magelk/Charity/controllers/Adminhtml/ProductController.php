@@ -45,6 +45,7 @@ class Magelk_Charity_Adminhtml_ProductController extends Mage_Adminhtml_Controll
             } catch (Exception $ex) {
                 Mage::log("Duplicate entry handle , exception for reference only", "1", "charity.log");
                 Mage::log($ex, "1", "charity.log");
+                $this->_getSession()->addError($this->__("Charity Organization Already Assigned To Product."));
             }
         }
 
@@ -79,6 +80,17 @@ class Magelk_Charity_Adminhtml_ProductController extends Mage_Adminhtml_Controll
 
     public function massRemoveAction()
     {
-        die('e');
+        $productModel = Mage::getModel('magelk_charity/product');
+        $product_ids = $this->getRequest()->getParam('product');
+        try{
+        foreach($product_ids as $id)
+        {
+            $productModel->load($id);
+            $productModel->delete();
+        }
+        }catch (Exception $e){
+            $this->_getSession()->addError("Failed Removing Assignment.");
+            Mage::log($e,"1","charity.exception.log");
+        }
     }
 }

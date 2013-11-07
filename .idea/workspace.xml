@@ -23,97 +23,95 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="charity.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/design/frontend/base/default/layout/charity.xml">
+      <file leaf-file-name="charity.phtml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/design/frontend/base/default/template/charity/charity.phtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="0" selection-start="433" selection-end="433" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="270">
+            <state line="34" column="20" selection-start="1059" selection-end="1059" vertical-scroll-proportion="-9.5" vertical-offset="282" max-vertical-offset="690">
+              <folding>
+                <element signature="e#6#85#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Charity.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/code/local/Magelk/Charity/Block/Charity.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="44" column="0" selection-start="1456" selection-end="1456" vertical-scroll-proportion="-8.875" vertical-offset="447" max-vertical-offset="780">
+              <folding>
+                <element signature="e#6#85#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ProductController.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/code/local/Magelk/Charity/controllers/Adminhtml/ProductController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="92" column="54" selection-start="2848" selection-end="2848" vertical-scroll-proportion="0.6727273" vertical-offset="1120" max-vertical-offset="1455">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="charity.phtml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/design/frontend/base/default/template/charity/charity.phtml">
+      <file leaf-file-name="Action.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../magento18/app/code/core/Mage/Adminhtml/Controller/Action.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="97" selection-start="405" selection-end="405" vertical-scroll-proportion="-9.375" vertical-offset="0" max-vertical-offset="510">
-              <folding>
-                <element signature="e#6#85#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Charity.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/code/local/Magelk/Charity/Block/Charity.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="75" selection-start="873" selection-end="873" vertical-scroll-proportion="0.55445546" vertical-offset="237" max-vertical-offset="540">
-              <folding>
-                <element signature="e#6#85#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Organization.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/code/local/Magelk/Charity/Block/Adminhtml/Organization.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="330">
+            <state line="81" column="34" selection-start="2155" selection-end="2166" vertical-scroll-proportion="-2.5849056" vertical-offset="733" max-vertical-offset="5550">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="Grid.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/code/local/Magelk/Charity/Block/Adminhtml/Organization/Grid.php">
+        <entry file="file://$PROJECT_DIR$/app/code/local/Magelk/Charity/Block/Adminhtml/Product/Grid.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="71" column="34" selection-start="2028" selection-end="2028" vertical-scroll-proportion="-10.75" vertical-offset="732" max-vertical-offset="1245">
+            <state line="80" column="23" selection-start="2241" selection-end="2251" vertical-scroll-proportion="-3.75" vertical-offset="1035" max-vertical-offset="1740">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Edit.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/code/local/Magelk/Charity/Block/Adminhtml/Organization/Edit.php">
+      <file leaf-file-name="Collection.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/code/local/Magelk/Charity/Model/Mysql4/Product/Collection.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="285">
+            <state line="8" column="41" selection-start="128" selection-end="128" vertical-scroll-proportion="-1.875" vertical-offset="0" max-vertical-offset="225">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Form.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/code/local/Magelk/Charity/Block/Adminhtml/Organization/Edit/Form.php">
+      <file leaf-file-name="Collection.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/code/local/Magelk/Charity/Model/Mysql4/Org/Collection.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="72" column="30" selection-start="2301" selection-end="2301" vertical-scroll-proportion="-22.625" vertical-offset="537" max-vertical-offset="1335">
-              <folding>
-                <element signature="e#6#85#0" expanded="true" />
-              </folding>
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="225">
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="Product.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/code/local/Magelk/Charity/Block/Adminhtml/Product.php">
+        <entry file="file://$PROJECT_DIR$/app/code/local/Magelk/Charity/Model/Mysql4/Product.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="36" selection-start="620" selection-end="620" vertical-scroll-proportion="-8.083333" vertical-offset="16" max-vertical-offset="330">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="225">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="List.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../magento18/app/code/core/Mage/Catalog/Block/Product/List.php">
+      <file leaf-file-name="Org.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/code/local/Magelk/Charity/Model/Mysql4/Org.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="69" selection-start="1170" selection-end="1170" vertical-scroll-proportion="23.125" vertical-offset="720" max-vertical-offset="3810">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="225">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Abstract.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../magento18/app/code/core/Mage/Catalog/Block/Product/Abstract.php">
+      <file leaf-file-name="Product.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/code/local/Magelk/Charity/Model/Product.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="83" selection-start="1177" selection-end="1201" vertical-scroll-proportion="-4.5416665" vertical-offset="56" max-vertical-offset="9510">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="285">
               <folding />
             </state>
           </provider>
@@ -132,22 +130,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/code/local/Magelk/Charity/Block/Adminhtml/Product/Organization/Suborg/Grid.php" />
         <option value="$PROJECT_DIR$/app/code/local/Magelk/Charity/Block/Adminhtml/Product/Organization.php" />
         <option value="$PROJECT_DIR$/app/code/local/Magelk/Charity/sql/magelk_charity_setup/mysql4-install-0.1.0.php" />
         <option value="$PROJECT_DIR$/app/code/local/Magelk/Charity/Block/Adminhtml/Product/Grid.php" />
         <option value="$PROJECT_DIR$/app/code/local/Magelk/Charity/Block/Adminhtml/Product/Organization/Grid.php" />
-        <option value="$PROJECT_DIR$/app/code/local/Magelk/Charity/controllers/Adminhtml/ProductController.php" />
         <option value="$PROJECT_DIR$/app/design/base/default/template/charity.phtml" />
         <option value="$PROJECT_DIR$/app/design/base/default/layout/charity.xml" />
         <option value="$PROJECT_DIR$/modman" />
         <option value="$PROJECT_DIR$/app/code/local/Magelk/Charity/etc/config.xml" />
         <option value="$PROJECT_DIR$/app/code/local/Magelk/Charity/Model/Observer.php" />
         <option value="$PROJECT_DIR$/app/design/frontend/base/default/layout/charity.xml" />
-        <option value="$PROJECT_DIR$/app/design/frontend/base/default/template/charity/charity.phtml" />
         <option value="$PROJECT_DIR$/app/code/local/Magelk/Charity/Block/Adminhtml/Organization/Grid.php" />
         <option value="$PROJECT_DIR$/app/code/local/Magelk/Charity/Block/Adminhtml/Organization/Edit/Form.php" />
+        <option value="$PROJECT_DIR$/app/code/local/Magelk/Charity/Model/Mysql4/Product/Collection.php" />
+        <option value="$PROJECT_DIR$/app/design/frontend/base/default/template/charity/charity.phtml" />
         <option value="$PROJECT_DIR$/app/code/local/Magelk/Charity/Block/Charity.php" />
+        <option value="$PROJECT_DIR$/app/code/local/Magelk/Charity/controllers/Adminhtml/ProductController.php" />
       </list>
     </option>
   </component>
@@ -916,6 +914,128 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="Model" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Mysql4" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Charity" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Charity" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="code" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="local" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Magelk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Charity" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Model" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Mysql4" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Product" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Charity" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Charity" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="code" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="local" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Magelk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Charity" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Model" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Mysql4" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Org" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Charity" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Charity" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="code" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="local" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Magelk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Charity" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="Helper" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -985,6 +1105,10 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="controllers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Adminhtml" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1057,6 +1181,48 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Adminhtml" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Charity" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Charity" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="code" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="local" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Magelk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Charity" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Block" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Adminhtml" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Product" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1274,64 +1440,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/modman">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="94" selection-start="368" selection-end="368" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="210">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../magento18/app/design/frontend/base/default/layout/catalog.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="197" column="45" selection-start="11297" selection-end="11297" vertical-scroll-proportion="0.0" vertical-offset="2734" max-vertical-offset="6360">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/code/local/Magelk/Charity/etc/config.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="47" selection-start="1491" selection-end="1491" vertical-scroll-proportion="0.0" vertical-offset="379" max-vertical-offset="1500">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../magento18/app/design/frontend/base/default/template/catalog/product/view.phtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="104" selection-start="1553" selection-end="1575" vertical-scroll-proportion="-5.625" vertical-offset="135" max-vertical-offset="2295">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/code/local/Magelk/Charity/Model/Observer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="10" selection-start="223" selection-end="223" vertical-scroll-proportion="-5.0" vertical-offset="0" max-vertical-offset="285">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../magento18/lib/Zend/Markup/Renderer/Html/List.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1350">
-          <folding>
-            <marker date="1383258373618" expanded="false" signature="-1:-1" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/code/local/Magelk/Charity/Block/Adminhtml/Product.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="36" selection-start="620" selection-end="620" vertical-scroll-proportion="-8.083333" vertical-offset="16" max-vertical-offset="330">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../magento18/app/code/core/Mage/Catalog/Block/Product/Abstract.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="83" selection-start="1177" selection-end="1201" vertical-scroll-proportion="-4.5416665" vertical-offset="56" max-vertical-offset="9510">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../magento18/app/code/core/Mage/Catalog/Block/Product/List.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="34" column="69" selection-start="1170" selection-end="1170" vertical-scroll-proportion="23.125" vertical-offset="720" max-vertical-offset="3810">
@@ -1343,15 +1451,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="8" column="0" selection-start="433" selection-end="433" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="270">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/design/frontend/base/default/template/charity/charity.phtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="97" selection-start="405" selection-end="405" vertical-scroll-proportion="-9.375" vertical-offset="0" max-vertical-offset="510">
-          <folding>
-            <element signature="e#6#85#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1385,12 +1484,77 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/code/local/Magelk/Charity/Block/Charity.php">
+    <entry file="file://$PROJECT_DIR$/app/code/local/Magelk/Charity/Model/Product.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="75" selection-start="873" selection-end="873" vertical-scroll-proportion="0.55445546" vertical-offset="237" max-vertical-offset="540">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="327">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/code/local/Magelk/Charity/Model/Mysql4/Org.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="327">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/code/local/Magelk/Charity/Model/Mysql4/Product.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="327">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/code/local/Magelk/Charity/Model/Mysql4/Org/Collection.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="327">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/code/local/Magelk/Charity/Model/Mysql4/Product/Collection.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="41" selection-start="128" selection-end="128" vertical-scroll-proportion="-1.875" vertical-offset="0" max-vertical-offset="225">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/code/local/Magelk/Charity/Block/Adminhtml/Product/Grid.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="80" column="23" selection-start="2241" selection-end="2251" vertical-scroll-proportion="-3.75" vertical-offset="1035" max-vertical-offset="1740">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/design/frontend/base/default/template/charity/charity.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="34" column="20" selection-start="1059" selection-end="1059" vertical-scroll-proportion="-9.5" vertical-offset="282" max-vertical-offset="690">
           <folding>
             <element signature="e#6#85#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/code/local/Magelk/Charity/Block/Charity.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="44" column="0" selection-start="1456" selection-end="1456" vertical-scroll-proportion="-8.875" vertical-offset="447" max-vertical-offset="780">
+          <folding>
+            <element signature="e#6#85#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../magento18/app/code/core/Mage/Adminhtml/Controller/Action.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="81" column="34" selection-start="2155" selection-end="2166" vertical-scroll-proportion="-2.5849056" vertical-offset="733" max-vertical-offset="5550">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/code/local/Magelk/Charity/controllers/Adminhtml/ProductController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="92" column="54" selection-start="2848" selection-end="2848" vertical-scroll-proportion="0.6727273" vertical-offset="1120" max-vertical-offset="1455">
+          <folding />
         </state>
       </provider>
     </entry>

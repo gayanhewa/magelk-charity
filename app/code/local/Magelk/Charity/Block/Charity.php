@@ -37,7 +37,9 @@ class Magelk_Charity_Block_Charity extends Mage_Core_Block_Template
                 $ccy = "";
                 $amount = $item->getAmount();
             }
-            $str = "We will donate {$ccy} {$amount} {$symbol} for every purchase of this product.";
+            $org = Mage::getModel('magelk_charity/org')->load($item->getOrganizationId())->getName();
+           // $str = "We will donate {$ccy} {$amount} {$symbol} for every purchase of this product.";
+            $str = "With your purchase we are donating {$ccy} {$amount} {$symbol} to {$org}";
             $array[$item->getOrganizationId()]=$str;
         }
         //why echo , since i will assign this to a js variable straight up.

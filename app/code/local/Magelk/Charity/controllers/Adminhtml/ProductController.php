@@ -92,5 +92,7 @@ class Magelk_Charity_Adminhtml_ProductController extends Mage_Adminhtml_Controll
             $this->_getSession()->addError("Failed Removing Assignment.");
             Mage::log($e,"1","charity.exception.log");
         }
+
+        $this->_redirect('*/*/edit/id'.$this->getRequest()->getParam('id'));
     }
 }

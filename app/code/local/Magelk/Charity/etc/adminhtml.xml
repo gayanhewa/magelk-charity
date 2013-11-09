@@ -17,8 +17,12 @@
                         </magelk_charity_product>
                         <magelk_charity_settlements>
                             <title>Manage Settlements</title>
-                            <action>adminhtml/organization</action>
+                            <action>adminhtml/txn</action>
                         </magelk_charity_settlements>
+                        <magelk_charity_settlements_report>
+                            <title>View Reports</title>
+                            <action>adminhtml/report</action>
+                        </magelk_charity_settlements_report>
                     </children>
                 </magelk_charity>
             </children>

@@ -280,7 +280,7 @@
                         </magelk_charity_product>
                         <magelk_charity_settlements>
                             <title>Manage Settlements</title>
-                            <action>adminhtml/organization</action>
+                            <action>adminhtml/txn</action>
                         </magelk_charity_settlements>
                     </children>
                 </magelk_charity></children>

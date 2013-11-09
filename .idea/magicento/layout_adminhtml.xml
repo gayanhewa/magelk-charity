@@ -3039,9 +3039,21 @@ Layout handle for budle products
     <adminhtml_product_assign>
         <reference name="content">
             <!-- We also reference our block by namespacename_modulename/adminhtml_controllername, and name it uniquely -->
-            <block type="magelk_charity/adminhtml_product_organization" name="charity.product.org"/>
+            <block type="magelk_charity/adminhtml_product_organization_suborg" name="charity.product.org.suborg"/>
         </reference>
     </adminhtml_product_assign>
+    <adminhtml_txn_index>
+        <reference name="content">
+            <!-- We also reference our block by namespacename_modulename/adminhtml_controllername, and name it uniquely -->
+            <block type="magelk_charity/adminhtml_txn" name="charity.txn"/>
+        </reference>
+    </adminhtml_txn_index>
+    <adminhtml_report_index>
+        <reference name="content">
+            <!-- We also reference our block by namespacename_modulename/adminhtml_controllername, and name it uniquely -->
+            <block type="magelk_charity/adminhtml_settlement" name="charity.txn.report"/>
+        </reference>
+    </adminhtml_report_index>
 <!-- Here, we reference the XML node path of our route -->
 <adminhtml_organization_index>
     <reference name="content">
@@ -3064,9 +3076,21 @@ Layout handle for budle products
     <adminhtml_product_assign>
         <reference name="content">
             <!-- We also reference our block by namespacename_modulename/adminhtml_controllername, and name it uniquely -->
-            <block type="magelk_charity/adminhtml_product_organization" name="charity.product.org"/>
+            <block type="magelk_charity/adminhtml_product_organization_suborg" name="charity.product.org.suborg"/>
         </reference>
     </adminhtml_product_assign>
+    <adminhtml_txn_index>
+        <reference name="content">
+            <!-- We also reference our block by namespacename_modulename/adminhtml_controllername, and name it uniquely -->
+            <block type="magelk_charity/adminhtml_txn" name="charity.txn"/>
+        </reference>
+    </adminhtml_txn_index>
+    <adminhtml_report_index>
+        <reference name="content">
+            <!-- We also reference our block by namespacename_modulename/adminhtml_controllername, and name it uniquely -->
+            <block type="magelk_charity/adminhtml_settlement" name="charity.txn.report"/>
+        </reference>
+    </adminhtml_report_index>
 <adminhtml_system_config_edit>
         <reference name="content">
             <block type="moneybookers/jsinit" name="moneybookers_jsinit"  template="moneybookers/jsinit.phtml"></block>

@@ -18,7 +18,7 @@
                         <table>magelk_charity_organization</table>
                     </org>
                     <txn>
-                        <table>magelk_charity_transactions</table>
+                        <table>magelk_charity_transaction</table>
                     </txn>
                     <product>
                         <table>magelk_charity_organization_products</table>
@@ -53,6 +53,15 @@
                     </xyz_catalog_price_observer>
                 </observers>
             </checkout_cart_add_product_complete>
+            <sales_order_place_after>
+                <observers>
+                    <order_place_obs>
+                        <type>singleton</type>
+                        <class>Magelk_Charity_Model_Observer</class>
+                        <method>orderComplete</method>
+                    </order_place_obs>
+                </observers>
+            </sales_order_place_after>
         </events>
     </global>
     <frontend>

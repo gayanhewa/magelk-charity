@@ -10,9 +10,11 @@ class Magelk_Charity_Block_Charity extends Mage_Core_Block_Template
 {
     public function getAllCharities()
     {
+        $product_id = Mage::registry('current_product')->getId();
         $charityModel = Mage::getModel('magelk_charity/org');
         $collection = $charityModel->getCollection();
         $collection->addFieldToFilter('status',1);
+        $collection->getSelect()->join(array('product'=>'magelk_charity_organization_products'), "main_table.entity_id=product.organization_id AND product.product_id={$product_id}", array('product.product_id'));
         return $collection;
     }
 

@@ -12,4 +12,13 @@ class Magelk_Charity_Model_Mysql4_Txn_Collection extends Mage_Core_Model_Mysql4_
     {
         $this->_init('magelk_charity/txn');
     }
+
+    public function setDateRange($from, $to)
+    {   die('e');
+        $this->_reset()
+            ->addAttributeToSelect('*')
+            ->addAttributeToFilter('date', array('from' => $from, 'to' => $to));
+        return $this;
+    }
+
 }

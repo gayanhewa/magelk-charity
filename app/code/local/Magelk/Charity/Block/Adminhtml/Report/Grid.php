@@ -6,17 +6,20 @@
  * Time: 19:31
  */
 
-class Magelk_Charity_Block_Adminhtml_Report_Grid extends Mage_Adminhtml_Block_Widget_Grid
+class Magelk_Charity_Block_Adminhtml_Report_Grid extends Mage_Adminhtml_Block_Report_Grid
 {
+    /**
+     * Sub report size
+     *
+     * @var int
+     */
+    protected $_subReportSize = 0;
+
     public function __construct()
     {
         parent::__construct();
 
-        // Set some defaults for our grid
-        $this->setDefaultSort('entity_id');
         $this->setId('magelk_charity_settle_grid');
-        //$this->setDefaultDir('asc');
-        $this->setSaveParametersInSession(true);
     }
 
     protected function _getCollectionClass()
@@ -27,10 +30,12 @@ class Magelk_Charity_Block_Adminhtml_Report_Grid extends Mage_Adminhtml_Block_Wi
 
     protected function _prepareCollection()
     {
-        $collection = Mage::getModel('magelk_charity/txn')->getCollection();
+        parent::_prepareCollection();
+
+        $collection = $this->getCollection()->initReport('magelk_charity/settlement_collection');
         $this->setCollection($collection);
 
-        return parent::_prepareCollection();
+        return $this;
     }
 
     protected function _prepareColumns()
@@ -77,30 +82,33 @@ class Magelk_Charity_Block_Adminhtml_Report_Grid extends Mage_Adminhtml_Block_Wi
                 'index' => 'product_id'
             )
         );
-        // Add the columns that should appear in the grid
-        $this->addColumn('qty',
-            array(
-                'header'=> $this->__('Qty'),
-                'align' =>'right',
-                'index' => 'qty'
-            )
-        );
 
         $this->addColumn('amount',
             array(
                 'header'=> $this->__('Donation'),
                 'align' =>'right',
-                'index' => 'amount'
+                'index' => 'amount',
+                'total'     =>'sum'
+            )
+        );
+        // Add the columns that should appear in the grid
+        $this->addColumn('qty',
+            array(
+                'header'=> $this->__('Qty'),
+                'align' =>'right',
+                'index' => 'qty',
+                'total'     =>'sum'
+            )
+        );
+        $this->addColumn('total',
+            array(
+                'header'=> $this->__('Total Donation'),
+                'align' =>'right',
+                'index' => 'total',
+                'total'     =>'sum'
             )
         );
 
-        $this->addColumn('status',
-            array(
-                'header'=> $this->__('Status'),
-                'align' =>'right',
-                'index' => 'status'
-            )
-        );
         return parent::_prepareColumns();
     }
 
@@ -109,4 +117,13 @@ class Magelk_Charity_Block_Adminhtml_Report_Grid extends Mage_Adminhtml_Block_Wi
         // This is where our row data will link to
         return $this->getUrl('*/*/edit', array('id' => $row->getId()));
     }
+
+    public function setDateRange($from, $to)
+    {
+        $this->_reset()
+            ->addAttributeToSelect('*')
+            ->addAttributeToFilter('date', array('from' => $from, 'to' => $to));
+        return $this;
+    }
+
 }

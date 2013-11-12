@@ -63,6 +63,32 @@ class Magelk_Charity_Block_Adminhtml_Organization_Edit_Form extends Mage_Adminht
             'title' => Mage::helper('checkout')->__('Description'),
             'required' => true,
         ));
+        $fieldset->addField('address', 'textarea', array(
+            'name' => 'address',
+            'label' => Mage::helper('checkout')->__('Address'),
+            'title' => Mage::helper('checkout')->__('Address'),
+            'required' => false,
+        ));
+
+        $fieldset->addField('email', 'text', array(
+            'name' => 'email',
+            'label' => Mage::helper('checkout')->__('Email'),
+            'title' => Mage::helper('checkout')->__('Email'),
+            'required' => false,
+        ));
+        $fieldset->addField('phone', 'text', array(
+            'name' => 'phone',
+            'label' => Mage::helper('checkout')->__('Phone'),
+            'title' => Mage::helper('checkout')->__('Phone'),
+            'required' => false,
+        ));
+
+        $fieldset->addField('paypal', 'text', array(
+            'name' => 'paypal',
+            'label' => Mage::helper('checkout')->__('Paypal'),
+            'title' => Mage::helper('checkout')->__('Paypal'),
+            'required' => false,
+        ));
 
         $fieldset->addField('status', 'select', array(
             'name' => 'status',

@@ -63,6 +63,40 @@ class Magelk_Charity_Block_Adminhtml_Organization_Grid extends Mage_Adminhtml_Bl
                 'index' => 'description'
             )
         );
+        // Add the columns that should appear in the grid
+        $this->addColumn('address',
+            array(
+                'header'=> $this->__('Address'),
+                'align' =>'right',
+                'width' => '50px',
+                'index' => 'address'
+            )
+        );
+        // Add the columns that should appear in the grid
+        $this->addColumn('email',
+            array(
+                'header'=> $this->__('Email'),
+                'align' =>'right',
+                'width' => '50px',
+                'index' => 'email'
+            )
+        );
+        $this->addColumn('phone',
+            array(
+                'header'=> $this->__('Phone'),
+                'align' =>'right',
+                'width' => '50px',
+                'index' => 'phone'
+            )
+        );
+        $this->addColumn('paypal',
+            array(
+                'header'=> $this->__('Paypal'),
+                'align' =>'right',
+                'width' => '50px',
+                'index' => 'paypal'
+            )
+        );
 
         $this->addColumn('status',
             array(

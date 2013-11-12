@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<widgets>
+    <total type="magelk_charity/total">
+        <name>Donation Summary</name>
+        <description type="desc">Display's the total donation</description>
+    </total>
+    <fulltotal type="magelk_charity/fulltotal">
+        <name>Donation Summary by organization</name>
+        <description type="desc">Display's the total donation by organization</description>
+        <parameters>
+            <!--<enabled_services>-->
+                <!--<label>Enabled Services</label>-->
+                <!--<visible>1</visible>-->
+                <!--<required>1</required>-->
+                <!--<type>multiselect</type>-->
+                <!--<source_model>widgettwo/services</source_model>-->
+            <!--</enabled_services>-->
+            <template translate="label">
+                <label>Frontend Template</label>
+                <visible>1</visible>
+                <required>1</required>
+                <type>select</type>
+                <values>
+                    <text translate="label">
+                        <value>charity/widget.phtml</value>
+                        <label>Text Links</label>
+                    </text>
+                </values>
+            </template>
+        </parameters>
+    </fulltotal>
+</widgets>

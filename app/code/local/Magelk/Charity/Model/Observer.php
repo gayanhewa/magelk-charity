@@ -90,6 +90,7 @@ class Magelk_Charity_Model_Observer
                     $txnModel->setOrderId($order->getId());
                     $txnModel->setQty($qty[$item["product_id"]]);
                     $txnModel->setAmount($donation);
+                    $txnModel->setTotal($donation*$qty[$item["product_id"]]);
                     $txnModel->setStatus(1);
                     $txnModel->save();
                 } catch (Exception $e) {

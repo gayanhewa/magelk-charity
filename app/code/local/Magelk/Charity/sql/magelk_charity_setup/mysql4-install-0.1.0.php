@@ -46,7 +46,8 @@ $sql = "
 CREATE TABLE IF NOT EXISTS  `magelk_charity_organization` (
   `entity_id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(512) NOT NULL,
-  `description` text NOT NULL,
+  `description` text,
+  `website` varchar(256) DEFAULT NULL,
   `address` text,
   `phone` varchar(16) DEFAULT NULL,
   `email` varchar(128) DEFAULT NULL,

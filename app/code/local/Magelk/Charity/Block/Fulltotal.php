@@ -24,6 +24,12 @@ class Magelk_Charity_Block_Fulltotal
      */
     protected function _toHtml()
     {
+        $txn = Mage::getModel('magelk_charity/txn');
+        $collection = $txn->getCollection();
+        $collection->getSelect()->join(array('org'=>'magelk_charity_organization'), 'main_table.organization_id=org.entity_id', array('org.*'))
+                   ->group('main_table.organization_id')
+                   ->from(null, array('sum'=>'SUM(total)'));
+        $this->assign('list', $collection);
         return parent::_toHtml();
     }
 

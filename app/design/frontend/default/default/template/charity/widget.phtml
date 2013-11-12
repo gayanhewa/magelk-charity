@@ -6,4 +6,18 @@
  * Time: 23:11
  */
 ?>
-<h1>Widget</h1>
+
+
+<?php foreach($list  as $row):?>
+    <div class="organizatoin-widget <?php echo $row->getId();?>">
+        <div class="organization-name"><?php echo $row->getName();?></div>
+        <div class="organization-website">
+            <?php if($row->getWebsite() != ""):?>
+                <a href="<?php echo $row->getWebsite();?>">
+                    <?php echo $row->getWebsite();?>
+                </a>
+            <?php endif;?>
+        </div>
+        <div class="organization-total"><?php echo Mage::helper('core')->currency($row->getData('sum'), true, false);?></div>
+    </div>
+<?php endforeach;?>

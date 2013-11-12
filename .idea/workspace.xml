@@ -50,10 +50,30 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="widget.phtml" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="widget.phtml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/design/frontend/default/default/template/charity/widget.phtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="32" selection-start="123" selection-end="123" vertical-scroll-proportion="0.29469547" vertical-offset="0" max-vertical-offset="509">
+            <state line="10" column="32" selection-start="123" selection-end="123" vertical-scroll-proportion="-6.25" vertical-offset="0" max-vertical-offset="465">
+              <folding>
+                <element signature="e#6#85#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Grid.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/code/local/Magelk/Charity/Block/Adminhtml/Organization/Grid.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="107" column="10" selection-start="3173" selection-end="3173" vertical-scroll-proportion="-13.125" vertical-offset="1215" max-vertical-offset="1890">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Image.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/code/local/Magelk/Charity/Block/Adminhtml/Renderer/Image.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="27" column="0" selection-start="831" selection-end="831" vertical-scroll-proportion="0.81983805" vertical-offset="0" max-vertical-offset="555">
               <folding>
                 <element signature="e#6#85#0" expanded="true" />
               </folding>
@@ -92,12 +112,10 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/code/local/Magelk/Charity/Model/Mysql4/Txn/Collection.php" />
         <option value="$PROJECT_DIR$/app/code/local/Magelk/Charity/Model/Settlement.php" />
         <option value="$PROJECT_DIR$/app/code/local/Magelk/Charity/Model/Mysql4/Settlement/Collection.php" />
         <option value="$PROJECT_DIR$/app/code/local/Magelk/Charity/Model/Observer.php" />
         <option value="$PROJECT_DIR$/app/code/local/Magelk/Charity/Block/Adminhtml/Report/Grid.php" />
-        <option value="$PROJECT_DIR$/app/code/local/Magelk/Charity/Block/Adminhtml/Organization/Grid.php" />
         <option value="$PROJECT_DIR$/modman" />
         <option value="$PROJECT_DIR$/app/design/frontend/base/default/template/charity/widget.phtml" />
         <option value="$PROJECT_DIR$/app/code/local/Magelk/Charity/etc/widget.xml" />
@@ -108,11 +126,10 @@
         <option value="$PROJECT_DIR$/../ma18/test.php" />
         <option value="$PROJECT_DIR$/app/code/local/Magelk/Charity/controllers/Adminhtml/OrganizationController.php" />
         <option value="$PROJECT_DIR$/app/design/frontend/default/default/template/charity/widget.phtml" />
+        <option value="$PROJECT_DIR$/app/code/local/Magelk/Charity/Block/Adminhtml/Organization/Grid.php" />
+        <option value="$PROJECT_DIR$/app/code/local/Magelk/Charity/Block/Adminhtml/Renderer/Image.php" />
       </list>
     </option>
-  </component>
-  <component name="PhpTemplates">
-    <option name="NEW_PHP_FILE_LAST_EXTENSION" value="phtml" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true">
     <include_path>
@@ -423,86 +440,6 @@
               <option name="myItemId" value="Charity" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Model" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Mysql4" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Charity" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Charity" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="code" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="local" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Magelk" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Charity" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Model" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Mysql4" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Settlement" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Charity" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Charity" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="code" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="local" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Magelk" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Charity" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -686,53 +623,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Organization" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Charity" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Charity" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="code" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="local" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Magelk" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Charity" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Block" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Adminhtml" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Organization" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Edit" />
+              <option name="myItemId" value="Renderer" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -846,18 +737,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/code/local/Magelk/Charity/etc/widget.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="43" selection-start="679" selection-end="688" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="555">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/code/local/Magelk/Charity/Block/Adminhtml/Txn/Grid.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1680" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/code/local/Magelk/Charity/Block/Adminhtml/Report/Grid.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="101" column="10" selection-start="2757" selection-end="2757" vertical-scroll-proportion="-47.833332" vertical-offset="292" max-vertical-offset="1935" />
@@ -935,7 +814,23 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/design/frontend/default/default/template/charity/widget.phtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="32" selection-start="123" selection-end="123" vertical-scroll-proportion="0.29469547" vertical-offset="0" max-vertical-offset="509">
+        <state line="10" column="32" selection-start="123" selection-end="123" vertical-scroll-proportion="-6.25" vertical-offset="0" max-vertical-offset="465">
+          <folding>
+            <element signature="e#6#85#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/code/local/Magelk/Charity/Block/Adminhtml/Organization/Grid.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="107" column="10" selection-start="3173" selection-end="3173" vertical-scroll-proportion="-13.125" vertical-offset="1215" max-vertical-offset="1890">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/code/local/Magelk/Charity/Block/Adminhtml/Renderer/Image.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="0" selection-start="831" selection-end="831" vertical-scroll-proportion="0.81983805" vertical-offset="0" max-vertical-offset="555">
           <folding>
             <element signature="e#6#85#0" expanded="true" />
           </folding>

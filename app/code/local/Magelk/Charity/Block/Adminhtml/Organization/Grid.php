@@ -97,6 +97,15 @@ class Magelk_Charity_Block_Adminhtml_Organization_Grid extends Mage_Adminhtml_Bl
                 'index' => 'paypal'
             )
         );
+        $this->addColumn('image',
+            array(
+                'header'=> $this->__('Logo'),
+                'align' =>'right',
+                'width' => '50px',
+                'index' => 'image',
+                'renderer' => 'Magelk_Charity_Block_Adminhtml_Renderer_Image'
+            )
+        );
 
         $this->addColumn('status',
             array(

@@ -16,7 +16,10 @@ class Magelk_Charity_Block_Total
 
         $collection->getSelect()->from(null, array('sum'=>'SUM(total)'));
         $item = $collection->getFirstItem();
+        $html = "";
+        if ($item->getData('sum') > 0) {
         $html = Mage::helper('magelk_charity/data')->__('Total Donated So far '). $item->getData('sum') ;
+        }
         return $html;
     }
 

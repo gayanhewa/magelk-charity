@@ -96,6 +96,33 @@ class Magelk_Charity_Adminhtml_OrganizationController extends Mage_Adminhtml_Con
             $model->setData($postData);
 
             try {
+
+                if(isset($_FILES['logo']['name']) and (file_exists($_FILES['logo']['tmp_name']))) {
+
+                        $uploader = new Varien_File_Uploader('logo');
+                        $uploader->setAllowedExtensions(array('jpg','jpeg','gif','png')); // or pdf or anything
+
+
+                        $uploader->setAllowRenameFiles(false);
+
+                        // setAllowRenameFiles(true) -> move your file in a folder the magento way
+                        // setAllowRenameFiles(true) -> move your file directly in the $path folder
+                        $uploader->setFilesDispersion(false);
+
+                        $path = Mage::getBaseDir('media') . DS ;
+
+                        $uploader->save($path, $_FILES['logo']['name']);
+
+                        $data['logo'] = $_FILES['logo']['name'];
+                        $model->setImage(implode('_',explode(' ',$data['logo'])));
+                }else {
+
+                    if(isset($data['logo']['delete']) && $data['logo']['delete'] == 1)
+                        $data['image_main'] = '';
+                    else
+                        unset($data['logo']);
+                }
+
                 $model->save();
 
                 Mage::getSingleton('adminhtml/session')->addSuccess($this->__('The Organization has been saved.'));

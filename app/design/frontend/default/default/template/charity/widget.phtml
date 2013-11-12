@@ -17,6 +17,9 @@
                     <?php echo $row->getWebsite();?>
                 </a>
             <?php endif;?>
+            <?php if($row->getImage() != ""):?>
+                <img class='organization-logo' src="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA) . $row->getImage();?>"/>
+            <?php endif;?>
         </div>
         <div class="organization-total"><?php echo Mage::helper('core')->currency($row->getData('sum'), true, false);?></div>
     </div>

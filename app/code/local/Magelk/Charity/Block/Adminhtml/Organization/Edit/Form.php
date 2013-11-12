@@ -31,7 +31,8 @@ class Magelk_Charity_Block_Adminhtml_Organization_Edit_Form extends Mage_Adminht
         $form = new Varien_Data_Form(array(
             'id' => 'edit_form',
             'action' => $this->getUrl('*/*/save', array('id' => $this->getRequest()->getParam('id'))),
-            'method' => 'POST'
+            'method' => 'POST',
+            'enctype' => 'multipart/form-data'
         ));
 
         $fieldset = $form->addFieldset('base_fieldset', array(
@@ -89,7 +90,11 @@ class Magelk_Charity_Block_Adminhtml_Organization_Edit_Form extends Mage_Adminht
             'title' => Mage::helper('checkout')->__('Paypal'),
             'required' => false,
         ));
-
+        $fieldset->addField('logo', 'image', array(
+            'label'     => Mage::helper('checkout')->__('Company Logo'),
+            'required'  => false,
+            'name'      => 'logo',
+        ));
         $fieldset->addField('status', 'select', array(
             'name' => 'status',
             'label' => Mage::helper('checkout')->__('Status'),

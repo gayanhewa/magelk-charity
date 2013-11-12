@@ -28,6 +28,8 @@ class Magelk_Charity_Block_Adminhtml_Txn_Grid extends Mage_Adminhtml_Block_Widge
     protected function _prepareCollection()
     {
         $collection = Mage::getModel('magelk_charity/txn')->getCollection();
+        $collection->getSelect()->join(array('org'=>'magelk_charity_organization'), 'main_table.organization_id=org.entity_id', array('org.name'));
+    //    $collection->getSelect()->join(array('product'=>'magelk_charity_organization'), 'main_table.organization_id=org.entity_id', array('org.name'));
         $this->setCollection($collection);
 
         return parent::_prepareCollection();
@@ -53,11 +55,12 @@ class Magelk_Charity_Block_Adminhtml_Txn_Grid extends Mage_Adminhtml_Block_Widge
             )
         );
         // Add the columns that should appear in the grid
-        $this->addColumn('organization_id',
+        $this->addColumn('name',
             array(
                 'header'=> $this->__('Organization ID'),
                 'align' =>'right',
-                'index' => 'organization_id'
+                'index' => 'name',
+                //'renderer' => 'Magelk_Charity_Block_Adminhtml_Renderer_Txn_Organization'
             )
         );
         // Add the columns that should appear in the grid
@@ -65,7 +68,8 @@ class Magelk_Charity_Block_Adminhtml_Txn_Grid extends Mage_Adminhtml_Block_Widge
             array(
                 'header'=> $this->__('Order ID'),
                 'align' =>'right',
-                'index' => 'order_id'
+                'index' => 'order_id',
+                'renderer' => 'Magelk_Charity_Block_Adminhtml_Renderer_Txn_Order'
             )
         );
 
@@ -74,7 +78,8 @@ class Magelk_Charity_Block_Adminhtml_Txn_Grid extends Mage_Adminhtml_Block_Widge
             array(
                 'header'=> $this->__('Product ID'),
                 'align' =>'right',
-                'index' => 'product_id'
+                'index' => 'product_id',
+                'renderer' => 'Magelk_Charity_Block_Adminhtml_Renderer_Txn_Organization'
             )
         );
         // Add the columns that should appear in the grid
@@ -104,9 +109,9 @@ class Magelk_Charity_Block_Adminhtml_Txn_Grid extends Mage_Adminhtml_Block_Widge
         return parent::_prepareColumns();
     }
 
-    public function getRowUrl($row)
-    {
-        // This is where our row data will link to
-        return $this->getUrl('*/*/edit', array('id' => $row->getId()));
-    }
+//    public function getRowUrl($row)
+//    {
+//        // This is where our row data will link to
+//        return $this->getUrl('*/*/edit', array('id' => $row->getId()));
+//    }
 }

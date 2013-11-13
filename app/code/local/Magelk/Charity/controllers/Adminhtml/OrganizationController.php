@@ -141,4 +141,25 @@ class Magelk_Charity_Adminhtml_OrganizationController extends Mage_Adminhtml_Con
             $this->_redirectReferer();
         }
     }
+
+    public function massAdjustmentAction()
+    {
+        $org_ids = $this->getRequest()->getParam('org');
+        $amount = $this->getRequest()->getParam('amount');
+        foreach ($org_ids as $org_id) {
+            try {
+                $txnModel = Mage::getModel('magelk_charity/txn');
+                $txnModel->setOrganizationId($org_id);
+                $txnModel->setQty(1);
+                $txnModel->setAmount($amount);
+                $txnModel->setTotal($amount);
+                $txnModel->setStatus(1);
+                $txnModel->save();
+            } catch (Exception $ex) {
+                Mage::log("Failed with adjustment ".$ex->getMessage());
+            }
+        }
+
+        $this->_redirect('*/*/index');
+    }
 }

@@ -123,4 +123,27 @@ class Magelk_Charity_Block_Adminhtml_Organization_Grid extends Mage_Adminhtml_Bl
         // This is where our row data will link to
         return $this->getUrl('*/*/edit', array('id' => $row->getId()));
     }
+
+    //overriden mass actions
+    protected function _prepareMassaction()
+    {
+        $this->setMassactionIdField('entity_id');
+        $this->getMassactionBlock()->setFormFieldName('org');
+
+        $this->getMassactionBlock()->addItem('assign', array(
+            'label'=> Mage::helper('catalog')->__('Create Adjustment'),
+            'url'  => $this->getUrl('*/*/massAdjustment'),
+            'additional' => array(
+                'visibility3' => array(
+                    'name' => 'amount',
+                    'type' => 'text',
+                    'class' => 'required-entry',
+                    'style' => 'width:50px',
+                    'label' => Mage::helper('catalog')->__('Amount')
+                ),
+            )
+        ));
+
+        return $this;
+    }
 }

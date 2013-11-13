@@ -20,6 +20,7 @@ class Magelk_Charity_Model_Org extends Mage_Core_Model_Abstract
     {
         $arrayOpts = array();
         $collection = $this->getCollection();
+        $collection->addFieldToFilter('status',1);
         foreach($collection as $item)
         {
             $arrayOpts[$item->getId()] = $item->getName();

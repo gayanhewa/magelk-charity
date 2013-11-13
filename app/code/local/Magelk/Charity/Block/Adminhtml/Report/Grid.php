@@ -70,7 +70,8 @@ class Magelk_Charity_Block_Adminhtml_Report_Grid extends Mage_Adminhtml_Block_Re
             array(
                 'header'=> $this->__('Order ID'),
                 'align' =>'right',
-                'index' => 'order_id'
+                'index' => 'order_id',
+                'renderer' => 'Magelk_Charity_Block_Adminhtml_Renderer_Txn_Order'
             )
         );
 
@@ -79,7 +80,8 @@ class Magelk_Charity_Block_Adminhtml_Report_Grid extends Mage_Adminhtml_Block_Re
             array(
                 'header'=> $this->__('Product ID'),
                 'align' =>'right',
-                'index' => 'product_id'
+                'index' => 'product_id',
+                'renderer' => 'Magelk_Charity_Block_Adminhtml_Renderer_Txn_Organization'
             )
         );
 

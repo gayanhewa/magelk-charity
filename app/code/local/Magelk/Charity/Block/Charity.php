@@ -28,11 +28,13 @@ class Magelk_Charity_Block_Charity extends Mage_Checkout_Block_Cart_Totals
         $array = array();
 
         $storeID = Mage::app()->getStore();
-        $ccy = Mage::app()->getStore($storeID)->getCurrentCurrencyCode();
+
+        //Mage::app()->getStore($storeID)->getCurrentCurrencyCode();
 
         foreach ($collection as $item) {
             $str = "";
             $symbol = "";
+            $ccy = Mage::app()->getLocale()->currency(Mage::app()->getStore()->getCurrentCurrencyCode())->getSymbol();
             $amount = number_format($item->getAmount(), 2, '.', ',');
             if ($item->getType() == "Percentage") {
                 $symbol = "%";

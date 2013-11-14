@@ -69,10 +69,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Charity.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="Charity.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/code/local/Magelk/Charity/Block/Charity.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="55" column="0" selection-start="2134" selection-end="2134" vertical-scroll-proportion="-21.875" vertical-offset="225" max-vertical-offset="915">
+            <state line="36" column="118" selection-start="1350" selection-end="1350" vertical-scroll-proportion="0.4979253" vertical-offset="225" max-vertical-offset="945">
               <folding />
             </state>
           </provider>
@@ -87,10 +87,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="charity.phtml" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="charity.phtml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/design/frontend/base/default/template/charity/charity.phtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="77" selection-start="344" selection-end="344" vertical-scroll-proportion="0.24242425" vertical-offset="75" max-vertical-offset="795">
+            <state line="18" column="77" selection-start="344" selection-end="344" vertical-scroll-proportion="-5.0" vertical-offset="75" max-vertical-offset="795">
               <folding />
             </state>
           </provider>
@@ -121,10 +121,10 @@
         <option value="$PROJECT_DIR$/../ma18/app/code/core/Mage/Core/Controller/Front/Action.php" />
         <option value="$PROJECT_DIR$/app/design/frontend/base/default/layout/charity.xml" />
         <option value="$PROJECT_DIR$/../ma18/app/design/frontend/base/default/template/checkout/onepage/review/info.phtml" />
-        <option value="$PROJECT_DIR$/app/code/local/Magelk/Charity/Block/Charity.php" />
         <option value="$PROJECT_DIR$/app/code/local/Magelk/Charity/Model/Observer.php" />
         <option value="$PROJECT_DIR$/app/design/frontend/base/default/template/charity/checkout.phtml" />
         <option value="$PROJECT_DIR$/app/design/frontend/base/default/template/charity/charity.phtml" />
+        <option value="$PROJECT_DIR$/app/code/local/Magelk/Charity/Block/Charity.php" />
       </list>
     </option>
   </component>
@@ -1218,16 +1218,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/code/local/Magelk/Charity/Block/Charity.php">
+    <entry file="file://$PROJECT_DIR$/app/design/frontend/base/default/template/charity/charity.phtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="0" selection-start="2134" selection-end="2134" vertical-scroll-proportion="-21.875" vertical-offset="225" max-vertical-offset="915">
+        <state line="18" column="77" selection-start="344" selection-end="344" vertical-scroll-proportion="-5.0" vertical-offset="75" max-vertical-offset="795">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/design/frontend/base/default/template/charity/charity.phtml">
+    <entry file="file://$PROJECT_DIR$/app/code/local/Magelk/Charity/Block/Charity.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="77" selection-start="344" selection-end="344" vertical-scroll-proportion="0.24242425" vertical-offset="75" max-vertical-offset="795">
+        <state line="36" column="118" selection-start="1350" selection-end="1350" vertical-scroll-proportion="0.4979253" vertical-offset="225" max-vertical-offset="945">
           <folding />
         </state>
       </provider>

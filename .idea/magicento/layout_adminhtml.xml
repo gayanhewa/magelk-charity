@@ -3051,7 +3051,11 @@ Layout handle for budle products
     <adminhtml_report_index>
         <reference name="content">
             <!-- We also reference our block by namespacename_modulename/adminhtml_controllername, and name it uniquely -->
-            <block type="magelk_charity/adminhtml_settlement" name="charity.txn.report"/>
+            <block type="magelk_charity/adminhtml_report" name="charity.txn.report">
+            <!--<action method="setTemplate">-->
+                <!--<template>charity/grid.phtml</template>-->
+            <!--</action>-->
+            </block>
         </reference>
     </adminhtml_report_index>
 <!-- Here, we reference the XML node path of our route -->
@@ -3088,7 +3092,11 @@ Layout handle for budle products
     <adminhtml_report_index>
         <reference name="content">
             <!-- We also reference our block by namespacename_modulename/adminhtml_controllername, and name it uniquely -->
-            <block type="magelk_charity/adminhtml_settlement" name="charity.txn.report"/>
+            <block type="magelk_charity/adminhtml_report" name="charity.txn.report">
+            <!--<action method="setTemplate">-->
+                <!--<template>charity/grid.phtml</template>-->
+            <!--</action>-->
+            </block>
         </reference>
     </adminhtml_report_index>
 <adminhtml_system_config_edit>

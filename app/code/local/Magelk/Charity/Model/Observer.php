@@ -15,6 +15,7 @@ class Magelk_Charity_Model_Observer
         $org_id = Mage::app()->getRequest()->getParam('charity');
         $qty = Mage::app()->getRequest()->getParam('qty');
         $charity = Mage::getSingleton('core/session')->getCharity();
+
         foreach($charity as $k=>$row){
           if ($charity["product_id"] == $event->getProduct()->getId() && $charity["org_id"] == $org_id)
           {
@@ -25,20 +26,51 @@ class Magelk_Charity_Model_Observer
         }
         if (!$charity || !is_array($charity)) {
             $array = array();
-
+            $product = Mage::getModel('magelk_charity/product');
+            $collection = $product->getCollection();
+            $collection->addFieldToFilter('product_id', $event->getProduct()->getId());
+            $collection->addFieldToFilter('organization_id', $org_id);
+            $collection->getSelect()->join(array('org'=>'magelk_charity_organization'), 'main_table.organization_id=org.entity_id', array('org.name'));
+            $item = $collection->getFirstItem();
+            $product_final_price =$event->getProduct()->getFinalPrice();
+            $donation = 0;
+            if ($item->getType() == "Fixed"){
+                $donation=$item->getAmount();
+            }else{
+                $donation = round(($product_final_price/100)*(int)$item["amount"], 4);
+            }
             $array[$event->getProduct()->getId()] = array(
-                'product_id' => $event->getProduct()->getId(),
+                'product_id' =>$event->getProduct()->getId(),
                 'org_id' => $org_id,
-                'qty' => $qty
+                'org_name' => $item->getName(),
+                'qty' => $qty,
+                'donation' => $donation,
+                'total'=>round((int)$qty*(float)$donation, 4)
             );
         } else {
             $array = Mage::getSingleton('core/session')->getCharity();
             Mage::getSingleton('core/session')->unsCharity();
+            $product = Mage::getModel('magelk_charity/product');
+            $collection = $product->getCollection();
+            $collection->addFieldToFilter('product_id', $event->getProduct()->getId());
+            $collection->addFieldToFilter('organization_id', $org_id);
+            $collection->getSelect()->join(array('org'=>'magelk_charity_organization'), 'main_table.organization_id=org.entity_id', array('org.name'));
+            $item = $collection->getFirstItem();
+            $product_final_price =$event->getProduct()->getFinalPrice();
+            $donation = 0;
+            if ($item->getType() == "Fixed"){
+                $donation=$item->getAmount();
+            }else{
+                $donation = round(($product_final_price/100)*(int)$item["amount"], 4);
+            }
             //prepare data
             $array[$event->getProduct()->getId()] = array(
                 'product_id' => $event->getProduct()->getId(),
                 'org_id' => $org_id,
-                'qty' => $qty
+                'org_name' => $item->getName(),
+                'qty' => $qty,
+                'donation' => $donation,
+                'total'=>round((int)$qty*(float)$donation, 4)
             );
         }
 

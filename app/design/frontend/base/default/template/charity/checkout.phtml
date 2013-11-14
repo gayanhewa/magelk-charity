@@ -1,0 +1,37 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: gayan
+ * Date: 13/11/13
+ * Time: 22:12
+ */
+?>
+
+<?php if ($this->getTotals()): ?>
+    <tfoot>
+
+    <?php $_colspan = $this->helper('tax')->displayCartBothPrices() ? 5 : 3; ?>
+    <?php foreach($this->getSummary() as $summary):?>
+    <tr>
+        <td class="a-right" colspan="<?php echo $_colspan; ?>">
+            <small><?php echo $this->helper('sales')->__('Total Donation for '.$summary["org_name"]) ?></small>
+        </td>
+        <td class="a-right">
+            <small><?php echo Mage::helper('core')->currency($summary["total"],true,false);?></small>
+        </td>
+    </tr>
+    <?php endforeach;?>
+    <?php echo $this->renderTotals(null, $_colspan); ?>
+    <?php echo $this->renderTotals('footer', $_colspan); ?>
+    <?php if ($this->needDisplayBaseGrandtotal()):?>
+        <tr>
+            <td class="a-right" colspan="<?php echo $_colspan; ?>">
+                <small><?php echo $this->helper('sales')->__('Your credit card will be charged for') ?></small>
+            </td>
+            <td class="a-right">
+                <small><?php echo $this->displayBaseGrandtotal() ?></small>
+            </td>
+        </tr>
+    <?php endif?>
+    </tfoot>
+<?php endif; ?>

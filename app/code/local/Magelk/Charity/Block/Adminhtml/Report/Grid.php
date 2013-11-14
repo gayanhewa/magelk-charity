@@ -9,7 +9,7 @@
 class Magelk_Charity_Block_Adminhtml_Report_Grid extends Mage_Adminhtml_Block_Report_Grid
 {
     /**
-     * Sub report size
+     * Sub charity size
      *
      * @var int
      */
@@ -58,11 +58,11 @@ class Magelk_Charity_Block_Adminhtml_Report_Grid extends Mage_Adminhtml_Block_Re
             )
         );
         // Add the columns that should appear in the grid
-        $this->addColumn('organization_id',
+        $this->addColumn('name',
             array(
                 'header'=> $this->__('Organization ID'),
                 'align' =>'right',
-                'index' => 'organization_id'
+                'index' => 'name'
             )
         );
         // Add the columns that should appear in the grid

@@ -19,7 +19,7 @@ class Magelk_Charity_Model_Mysql4_Settlement_Collection extends Mage_Core_Model_
         $this->getSelect()->group('organization_id');
         $this->getSelect()->group('product_id');
         $this->getSelect()->columns(array('amount' => 'SUM(amount)'));
-
+        $this->getSelect()->join(array('org'=> 'magelk_charity_organization'), 'main_table.organization_id=org.entity_id', array('org.name'));
         return $this;
     }
 

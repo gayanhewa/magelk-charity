@@ -5,21 +5,33 @@
  * Date: 06/11/13
  * Time: 11:47
  */
+
+
 ?>
 
 <div id="charity-wrapper">
     </br>
-    <label> Select Charity :
+    <label> Select Organization :
         <div id="donation-desc">
 
         </div>
-        <select id="charity-select" name="charity">
-            <option value="">Select Charity</option>
+    <?php if (count($this->getAllCharities()) > 1): ?>
+            <select id="charity-select" name="charity" class="validate-select">
+                <option value="">Select Organization</option>
+                <?php foreach ($this->getAllCharities() as $charity): ?>
+                    <option value="<?php echo $charity->getId(); ?>"><?php echo $charity->getName(); ?></option>
+                <?php endforeach; ?>
+            </select>
+        </label>
+    <?php else: ?>
+
+        <select id="charity-select" name="charity" class="validate-select">
             <?php foreach ($this->getAllCharities() as $charity): ?>
                 <option value="<?php echo $charity->getId(); ?>"><?php echo $charity->getName(); ?></option>
             <?php endforeach; ?>
         </select>
-    </label>
+    <?php endif; ?>
+
 </div>
 
 <script type="text/javascript">
@@ -36,6 +48,6 @@
                 }
             }
         })
-
+        fireEvent($("charity-select"), 'change');
     });
 </script>

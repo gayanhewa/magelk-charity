@@ -3,6 +3,7 @@
   <component name="MagicentoSettings">
     <option name="pathToMage" value="$PROJECT_DIR$/../magento18/app/Mage.php" />
     <option name="pathToMage" value="$PROJECT_DIR$/../magento18/app/Mage.php" />
+    <option name="enabled" value="false" />
     <option name="pathToPhp" value="" />
     <option name="urlToMagento" value="" />
     <option name="packages" value="" />

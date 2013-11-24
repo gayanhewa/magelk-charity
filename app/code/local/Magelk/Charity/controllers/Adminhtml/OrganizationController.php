@@ -146,6 +146,7 @@ class Magelk_Charity_Adminhtml_OrganizationController extends Mage_Adminhtml_Con
     {
         $org_ids = $this->getRequest()->getParam('org');
         $amount = $this->getRequest()->getParam('amount');
+        $comment = $this->getRequest()->getParam('comment');
         foreach ($org_ids as $org_id) {
             try {
                 $txnModel = Mage::getModel('magelk_charity/txn');
@@ -154,6 +155,7 @@ class Magelk_Charity_Adminhtml_OrganizationController extends Mage_Adminhtml_Con
                 $txnModel->setAmount($amount);
                 $txnModel->setTotal($amount);
                 $txnModel->setStatus(1);
+                $txnModel->setComment($comment);
                 $txnModel->save();
             } catch (Exception $ex) {
                 Mage::log("Failed with adjustment ".$ex->getMessage());

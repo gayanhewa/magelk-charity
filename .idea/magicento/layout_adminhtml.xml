@@ -3050,6 +3050,9 @@ Layout handle for budle products
     </adminhtml_txn_index>
     <adminhtml_report_index>
         <reference name="content">
+            <block type="adminhtml/report_product_viewed" template="report/grid/container.phtml" name="product.report.grid.container">
+
+            </block>
             <!-- We also reference our block by namespacename_modulename/adminhtml_controllername, and name it uniquely -->
             <block type="magelk_charity/adminhtml_report" name="charity.txn.report">
             <!--<action method="setTemplate">-->
@@ -3091,6 +3094,9 @@ Layout handle for budle products
     </adminhtml_txn_index>
     <adminhtml_report_index>
         <reference name="content">
+            <block type="adminhtml/report_product_viewed" template="report/grid/container.phtml" name="product.report.grid.container">
+
+            </block>
             <!-- We also reference our block by namespacename_modulename/adminhtml_controllername, and name it uniquely -->
             <block type="magelk_charity/adminhtml_report" name="charity.txn.report">
             <!--<action method="setTemplate">-->

@@ -2643,7 +2643,15 @@
                         <method>actionFrontPreDispatchXmlAdmin</method>
                     </xmlconnect>
                 </observers>
-            </controller_action_predispatch></events><cms>
+            </controller_action_predispatch><checkout_cart_update_items_after>
+                <observers>
+                    <update_cart_event>
+                        <type>singleton</type>
+                        <class>Magelk_Charity_Model_Observer</class>
+                        <method>updateQty</method>
+                    </update_cart_event>
+                </observers>
+            </checkout_cart_update_items_after></events><cms>
             <page>
                 
             <tempate_filter>widget/template_filter</tempate_filter></page>
@@ -6268,7 +6276,7 @@ T: {{var telephone}}
         </Mage_Connect><Magestore_Bannerslider>
             <version>2.0.0</version>
         </Magestore_Bannerslider><Magelk_Charity>
-            <version>0.1.0</version>
+            <version>0.1.1</version>
         </Magelk_Charity><Phoenix_Moneybookers>
             <version>1.6.0.0</version>
         </Phoenix_Moneybookers><Foo_Bar>

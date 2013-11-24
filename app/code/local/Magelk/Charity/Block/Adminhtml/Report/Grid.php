@@ -34,7 +34,6 @@ class Magelk_Charity_Block_Adminhtml_Report_Grid extends Mage_Adminhtml_Block_Re
 
         $collection = $this->getCollection()->initReport('magelk_charity/settlement_collection');
         $this->setCollection($collection);
-
         return $this;
     }
 

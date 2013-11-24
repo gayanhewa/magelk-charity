@@ -17,6 +17,7 @@ class Magelk_Charity_Block_Adminhtml_Product_Grid extends Mage_Adminhtml_Block_C
         $this->setId('magelk_charity_prod_grid');
         $this->setDefaultDir('asc');
         $this->setSaveParametersInSession(true);
+        $this->setUseAjax(false);
     }
 
     protected function _getCollectionClass()
@@ -32,35 +33,6 @@ class Magelk_Charity_Block_Adminhtml_Product_Grid extends Mage_Adminhtml_Block_C
 
     protected function _prepareColumns()
     {
-        // Add the columns that should appear in the grid
-        $this->addColumn('entity_id',
-            array(
-                'header'=> $this->__('ID'),
-                'align' =>'right',
-                'width' => '50px',
-                'index' => 'entity_id'
-            )
-        );
-        // Add the columns that should appear in the grid
-        $this->addColumn('name',
-            array(
-                'header'=> $this->__('Name'),
-                'align' =>'right',
-                'width' => '50px',
-                'index' => 'name'
-            )
-        );
-//
-//        // Add the columns that should appear in the grid
-//        $this->addColumn('short_description',
-//            array(
-//                'header'=> $this->__('Description'),
-//                'align' =>'right',
-//                'width' => '50px',
-//                'index' => 'short_description'
-//            )
-//        );
-
         return parent::_prepareColumns();
     }
 
@@ -112,5 +84,8 @@ class Magelk_Charity_Block_Adminhtml_Product_Grid extends Mage_Adminhtml_Block_C
         return $this;
     }
 
-
+    public function getGridUrl()
+    {
+        return $this->getUrl('*/*/index', array('_current'=>true));
+    }
 }

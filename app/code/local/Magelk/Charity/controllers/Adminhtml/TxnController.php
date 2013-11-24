@@ -19,4 +19,9 @@ class Magelk_Charity_Adminhtml_TxnController extends Mage_Adminhtml_Controller_A
         $this->loadLayout();
         $this->renderLayout();
     }
+
+    public function testAction()
+    {
+
+    }
 }

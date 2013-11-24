@@ -141,6 +141,13 @@ class Magelk_Charity_Block_Adminhtml_Organization_Grid extends Mage_Adminhtml_Bl
                     'style' => 'width:50px',
                     'label' => Mage::helper('catalog')->__('Amount')
                 ),
+                'visibility2' => array(
+                    'name' => 'comment',
+                    'type' => 'text',
+                    'class' => 'required-entry',
+                    'style' => 'width:50px',
+                    'label' => Mage::helper('catalog')->__('Comment')
+                ),
             )
         ));
 

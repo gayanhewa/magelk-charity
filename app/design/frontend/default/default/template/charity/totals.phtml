@@ -1,0 +1,23 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: gayan
+ * Date: 15/11/13
+ * Time: 13:07
+ */
+$block = Mage::getBlockSingleton('magelk_charity/charity');
+$ar = $block->getSummary();
+Mage::getSingleton('core/session')->unsCharity();
+// array(array('org_name' => 'sss', 'total' => 200));
+?>
+
+<?php foreach ($ar as $key => $summary): ?>
+
+        <tr>
+            <td>
+                <center>
+                <strong><?php echo Mage::helper('checkout')->__('Total Donation for ' . $summary["org_name"]); ?>, <?php echo Mage::helper('core')->currency($summary["total"], true, false); ?></strong>
+                </center>
+            </td>
+        </tr>
+<?php endforeach; ?>

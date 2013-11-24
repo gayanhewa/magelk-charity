@@ -36,7 +36,7 @@
  */
 $numColumns = sizeof($this->getColumns());
 ?>
-<h1>sd</h1>
+
 <?php if($this->getCollection()): ?>
     <?php if($this->canDisplayContainer()): ?>
         <?php if($this->getGridHeader()): ?>
@@ -61,7 +61,7 @@ $numColumns = sizeof($this->getColumns());
         <?php if($this->getDateFilterVisibility()): ?>
             <td class="a-left filter">
                 <div class="f-left">
-                    <div><?php echo $this->__('From') ?>:&nbsp;<input class="input-text no-changes required-entry" type="text" id="period_date_from" name="report_from" value="<?php echo $this->getFilter('report_from') ?>" style="width:5em" /> <img src="<?php echo $this->getSkinUrl('images/grid-cal.gif') ?>" title="<?php echo $this->__('Select Date') ?>" id="period_date_from_trig" alt="<?php echo $this->__('Select Date') ?>" class="v-middle"/>&nbsp;&nbsp;</div>
+                    <div><?php echo $this->__('From1') ?>:&nbsp;<input class="input-text no-changes required-entry" type="text" id="period_date_from" name="report_from" value="<?php echo $this->getFilter('report_from') ?>" style="width:5em" /> <img src="<?php echo $this->getSkinUrl('images/grid-cal.gif') ?>" title="<?php echo $this->__('Select Date') ?>" id="period_date_from_trig" alt="<?php echo $this->__('Select Date') ?>" class="v-middle"/>&nbsp;&nbsp;</div>
                     <div id="period_date_from_advaice"></div>
                 </div>
 

@@ -8,46 +8,52 @@
 
 
 ?>
+<?php if (count($this->getAllCharities()) > 0): ?>
+    <div id="charity-wrapper" style="cursor: default !important">
+        </br>
+        <label>
+            <?php if (count($this->getAllCharities()) > 1): ?>
+                Select Organization :
+            <?php endif; ?>
+            <div id="donation-desc" style="cursor: default !important">
 
-<div id="charity-wrapper">
-    </br>
-    <label> Select Organization :
-        <div id="donation-desc">
+            </div>
+            <?php if (count($this->getAllCharities()) > 1): ?>
+                <select id="charity-select" name="charity" class="validate-select">
+                    <option value="">Select Organization</option>
+                    <?php foreach ($this->getAllCharities() as $charity): ?>
+                        <option value="<?php echo $charity->getId(); ?>"><?php echo $charity->getName(); ?></option>
+                    <?php endforeach; ?>
+                </select>
 
-        </div>
-    <?php if (count($this->getAllCharities()) > 1): ?>
-            <select id="charity-select" name="charity" class="validate-select">
-                <option value="">Select Organization</option>
+            <?php else: ?>
                 <?php foreach ($this->getAllCharities() as $charity): ?>
-                    <option value="<?php echo $charity->getId(); ?>"><?php echo $charity->getName(); ?></option>
+                    <input type="hidden" id="charity-select-hidden" name="charity" value="<?php echo $charity->getId(); ?>"/>
                 <?php endforeach; ?>
-            </select>
+            <?php endif; ?>
         </label>
-    <?php else: ?>
+    </div>
 
-        <select id="charity-select" name="charity" class="validate-select">
-            <?php foreach ($this->getAllCharities() as $charity): ?>
-                <option value="<?php echo $charity->getId(); ?>"><?php echo $charity->getName(); ?></option>
-            <?php endforeach; ?>
-        </select>
-    <?php endif; ?>
-
-</div>
-
-<script type="text/javascript">
-    var amounts = <?php echo $this->getCharityAmountByProductId();?>;
-    document.observe("dom:loaded", function () {
-        $$('div.price-box')[0].insert($('charity-wrapper'));
-
-        //On change charity dropdown
-        $("charity-select").observe('change', function () {
-            $('donation-desc').innerHTML = "";
-            if ($("charity-select").value != "") {
-                if (amounts[$("charity-select").value] != undefined) {
-                    $('donation-desc').innerHTML = amounts[$("charity-select").value];
+    <script type="text/javascript">
+        var amounts = <?php echo $this->getCharityAmountByProductId();?>;
+        document.observe("dom:loaded", function () {
+            $$('div.price-box')[0].insert($('charity-wrapper'));
+            <?php if (count($this->getAllCharities()) > 1): ?>
+            //On change charity dropdown
+            $("charity-select").observe('change', function () {
+                $('donation-desc').innerHTML = "";
+                if ($("charity-select").value != "") {
+                    if (amounts[$("charity-select").value] != undefined) {
+                        $('donation-desc').innerHTML = amounts[$("charity-select").value];
+                    }
                 }
-            }
-        })
-        fireEvent($("charity-select"), 'change');
-    });
-</script>
+            })
+            fireEvent($("charity-select"), 'change');
+            <?php else:?>
+
+            $('donation-desc').innerHTML = amounts[$("charity-select-hidden").value];
+            //console.log(amounts);
+            <?php endif;?>
+        });
+    </script>
+<?php endif; ?>

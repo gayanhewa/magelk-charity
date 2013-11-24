@@ -17,6 +17,8 @@ class Magelk_Charity_Block_Adminhtml_Report extends Mage_Adminhtml_Block_Widget_
         $this->_headerText = $this->__('Report');
 
         parent::__construct();
+        //$this->setTemplate('report/grid/container.phtml');
         $this->_removeButton('add');
+
     }
 }

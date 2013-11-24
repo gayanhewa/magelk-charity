@@ -99,13 +99,23 @@ class Magelk_Charity_Block_Adminhtml_Txn_Grid extends Mage_Adminhtml_Block_Widge
             )
         );
 
-        $this->addColumn('status',
+        $this->addColumn('total',
             array(
-                'header'=> $this->__('Status'),
+                'header'=> $this->__('Total'),
                 'align' =>'right',
-                'index' => 'status'
+                'index' => 'total',
+                'renderer' => 'Magelk_Charity_Block_Adminhtml_Renderer_Txn_Total'
             )
         );
+
+        $this->addColumn('comment',
+            array(
+                'header'=> $this->__('Comment'),
+                'align' =>'right',
+                'index' => 'comment'
+            )
+        );
+
         return parent::_prepareColumns();
     }
 

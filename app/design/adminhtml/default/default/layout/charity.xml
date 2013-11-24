@@ -1,12 +1,12 @@
 <?xml version="1.0"?>
 <layout>
-<!-- Here, we reference the XML node path of our route -->
-<adminhtml_organization_index>
-    <reference name="content">
-        <!-- We also reference our block by namespacename_modulename/adminhtml_controllername, and name it uniquely -->
-        <block type="magelk_charity/adminhtml_organization" name="charity.organization"/>
-    </reference>
-</adminhtml_organization_index>
+    <!-- Here, we reference the XML node path of our route -->
+    <adminhtml_organization_index>
+        <reference name="content">
+            <!-- We also reference our block by namespacename_modulename/adminhtml_controllername, and name it uniquely -->
+            <block type="magelk_charity/adminhtml_organization" name="charity.organization"/>
+        </reference>
+    </adminhtml_organization_index>
     <adminhtml_product_index>
         <reference name="content">
             <!-- We also reference our block by namespacename_modulename/adminhtml_controllername, and name it uniquely -->
@@ -33,12 +33,19 @@
     </adminhtml_txn_index>
     <adminhtml_report_index>
         <reference name="content">
+            <block type="magelk_charity/adminhtml_report" name="charity.txn.report"/>
             <!-- We also reference our block by namespacename_modulename/adminhtml_controllername, and name it uniquely -->
-            <block type="magelk_charity/adminhtml_report" name="charity.txn.report">
-            <!--<action method="setTemplate">-->
-                <!--<template>charity/grid.phtml</template>-->
-            <!--</action>-->
-            </block>
+            <!--block type="magelk_charity/adminhtml_report" template="report/grid/container.phtml"  name="charity.txn.report">
+                <block type="adminhtml/store_switcher" template="report/store/switcher/enhanced.phtml" name="store.switcher">
+                    <action method="setStoreVarName"><var_name>store_ids</var_name></action>
+                </block>
+                <block type="adminhtml/report_filter_form" name="grid.filter.form">
+                    <action method="setFieldVisibility">
+                        <field>report_type</field>
+                        <visibility>0</visibility>
+                    </action>
+                </block>
+            </block-->
         </reference>
     </adminhtml_report_index>
 </layout>

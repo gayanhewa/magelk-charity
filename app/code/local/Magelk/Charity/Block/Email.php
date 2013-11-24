@@ -6,7 +6,7 @@
  * Time: 22:23
  */
 
-class Magelk_Charity_Block_Charity extends Mage_Checkout_Block_Cart_Totals
+class Magelk_Charity_Block_Email extends Mage_Sales_Block_Order_Totals
 {
     public function getAllCharities()
     {
@@ -60,28 +60,8 @@ class Magelk_Charity_Block_Charity extends Mage_Checkout_Block_Cart_Totals
                 $ar[$row["org_id"]]["total"] += $row["total"];
                 $ar[$row["org_id"]]["org_name"] = $row["org_name"];
             }
-
             return $ar;
         }
 
-    }
-
-    public function getSummary2($order)
-    {
-       $order_id = $order->getId();
-       $txnModel = Mage::getModel('magelk_charity/txn');
-       $txn_collection = $txnModel->getCollection();
-        $txn_collection->getSelect()->join(array('org'=>'magelk_charity_organization'), "main_table.organization_id=org.entity_id", array('org.name'));
-       //return array(array('org_name' => 'sss', 'total' => 200));
-        $array = array();
-        foreach($txn_collection as $row)
-        {
-            $ar = array();
-            $ar["org_name"] = $row->getName();
-            $ar["total"] = $row->getTotal();
-            array_push($array, $ar);
-        }
-
-        return $array;
     }
 }

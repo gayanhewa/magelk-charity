@@ -1,0 +1,113 @@
+<?xml version="1.0"?>
+<config>
+    <tabs>
+        <shipsubmit translate="label" module="iammo_shipsubmit">
+            <label>Iammo Shipping Api</label>
+            <sort_order>1000</sort_order>
+        </shipsubmit>
+    </tabs>
+    <sections>
+        <shipsubmit translate="label" module="iammo_shipsubmit">
+            <label>Shipping Api Options</label>
+            <tab>iammo</tab>
+            <sort_order>1000</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>
+                <shipsubmit_group translate="label" module="iammo_shipsubmit">
+                    <label> Api Options</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>1000</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <shipsubmit_sendername translate="label">
+                            <label>Sender Name: </label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </shipsubmit_sendername>
+                        <shipsubmit_senderemail translate="label">
+                            <label>Sender Email: </label>
+                            <comment>name@doamin.com</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </shipsubmit_senderemail>
+
+                        <shipsubmit_pikingrecivername translate="label">
+                            <label>Piking Note Reciver Name: </label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </shipsubmit_pikingrecivername>
+                        <shipsubmit_pikingreciveremail translate="label">
+                            <label>Reciver Email: </label>
+                            <comment>name@doamin.com</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </shipsubmit_pikingreciveremail>
+
+                        <shipsubmit_wsdl translate="label">
+                            <label>API WSDL :  </label>
+                            <comment>WSDL URL</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </shipsubmit_wsdl>
+
+                        <shipsubmit_customernumber translate="label">
+                            <label>API CustomerNumber: </label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </shipsubmit_customernumber>
+
+                        <shipsubmit_usernameapi translate="label">
+                            <label>API UserName </label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </shipsubmit_usernameapi>
+
+                        <shipsubmit_apipassword translate="label">
+                            <label>API Password: </label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </shipsubmit_apipassword>
+
+                        <shipsubmit_apisource translate="label">
+                            <label>Source: </label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </shipsubmit_apisource>
+
+                    </fields>
+                </shipsubmit_group>
+            </groups>
+        </shipsubmit>
+    </sections>
+</config>
